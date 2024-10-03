@@ -1,0 +1,5 @@
+spring:
+  security:
+    user: # 使用了 配置类的方式，该方式配置的用户就失效了。
+      name: admin
+      password: 123
