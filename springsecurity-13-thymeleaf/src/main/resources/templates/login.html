@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登陆</title>
+</head>
+<body>
+<h2>登录页面</h2>
+<!--<form action="/login/doLogin 注意这里要和 WebSecurityConfig 当中配置的 springsecurity配置好了一样，-->
+<!--登录成功跳转到哪里" method="post">-->
+    <form action="/login/doLogin" method="post">
+    <table>
+        <tr>
+            <td>用户名:</td>
+            <td><input type="text" name="uname" value="thomas"></td>
+        </tr>
+        <tr>
+            <td>密码:</td>
+            <td><input type="password" name="pwd"></td>
+            <span th:if="${param.error}">用户名或者密码错误</span>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">登录</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
